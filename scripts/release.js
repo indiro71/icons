@@ -5,7 +5,7 @@ const version = require('../package.json').version;
 
 const exec = command => execSync(command, { stdio: 'inherit' });
 
-const BUILD_PATH = path.join(__dirname, '..', 'lib');
+const BUILD_PATH = path.join(__dirname, '..', 'dist');
 
 const getPackageJsonSource = ({ version }) => `{
   "name": "@indiro/react-icons",
