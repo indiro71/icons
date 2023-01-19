@@ -9,10 +9,7 @@ const BUILD_PATH = path.join(__dirname, '..', 'lib');
 
 const getPackageJsonSource = ({ version }) => `{
   "name": "@indiro/react-icons",
-  "version": "${version}",
-  "peerDependencies": {
-    "react": ">=16.1.0"
-  }
+  "version": "${version}"
 }`;
 
 const publishLib = async () => {
