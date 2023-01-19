@@ -15,13 +15,13 @@ const getPackageJsonSource = ({ version }) => `{
   }
 }`;
 
-const publishLib = () => {
+const publishLib = async () => {
   const pj = {
     filepath: 'package.json',
     source: getPackageJsonSource({ version })
   }
 
-  fs.outputFile(path.join(BUILD_PATH, pj.filepath), pj.source);
+  await fs.outputFile(path.join(BUILD_PATH, pj.filepath), pj.source);
 
   console.log('publish')
 
