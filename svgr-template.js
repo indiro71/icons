@@ -3,7 +3,7 @@ function defaultTemplate(
     opts,
     { imports, interfaces, componentName, props, jsx }
 ) {
-    const tygerIcon = `${componentName.name.replace('Svg', '')}`;
+    const compIcon = `${componentName.name.replace('Svg', '')}`;
     const plugins = ['jsx'];
     if (opts.typescript) {
         plugins.push('typescript');
@@ -11,10 +11,10 @@ function defaultTemplate(
     const typeScriptTpl = template.smart({ plugins });
     return typeScriptTpl.ast`${imports}
   ${interfaces}
-  function ${tygerIcon}(${props}) {
+  function ${compIcon}(${props}) {
     return ${jsx};
   }
-  export default ${tygerIcon}
+  export default ${compIcon}
     `;
 }
 module.exports = defaultTemplate;

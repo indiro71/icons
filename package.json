@@ -3,7 +3,7 @@
   "name": "@indiro/icons",
   "version": "1.0.27",
   "scripts": {
-    "clean": "rm -rf src/icons && rm -rf dist",
+    "clean": "rm -rf src/icons && rm -rf lib",
     "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
     "build": "npm run clean && npm run svgr && rollup -c",
     "release": "npm run build && git stash && npm version patch && git stash pop && NODE_ENV=production node scripts/release.js"
