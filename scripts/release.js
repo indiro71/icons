@@ -10,7 +10,8 @@ fs.readdirSync(PACKAGES_PATH).forEach((pack) => {
   const packPath = path.join(PACKAGES_PATH, pack);
   console.log('publish')
 
-  exec('git add *');
+  exec('git status');
+  exec('git add -A');
   exec('git commit -m "Add images"');
   exec('git push');
   exec(`cd ${packPath} && npm publish --access=public`);
