@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@indiro/icons",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "build": "NODE_ENV=production node scripts/build.js",
     "release": "npm version patch && npm run build && NODE_ENV=production node scripts/release.js"
