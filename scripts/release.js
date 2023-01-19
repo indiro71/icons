@@ -13,5 +13,5 @@ fs.readdirSync(PACKAGES_PATH).forEach((pack) => {
   exec('git add *');
   exec('git commit -m "Add images"');
   exec('git push');
-  // exec(`cd ${packPath} && npm publish`);
+  exec(`cd ${packPath} && npm publish --access=public`);
 });
