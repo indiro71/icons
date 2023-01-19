@@ -3,17 +3,34 @@
   "name": "@indiro/icons",
   "version": "1.0.10",
   "scripts": {
-    "build": "NODE_ENV=production node scripts/build.js",
+    "clean": "rm -rf src/icons && rm -rf lib",
+    "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
+    "build": "npm run clean && npm run svgr && rollup -c",
     "release": "git stash && npm version patch && git stash pop && npm run build && NODE_ENV=production node scripts/release.js"
   },
+  "main": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-react-native-web": "^0.3.3",
-    "babel-preset-react-native": "^4.0.0",
-    "del": "^3.0.0",
-    "fs-extra": "^5.0.0",
-    "glob": "^7.1.2",
-    "lodash": "^4.17.4",
-    "svgo": "^1.0.4"
-  }
+    "@babel/core": "^7.15.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-node-resolve": "^13.0.4",
+    "@svgr/cli": "^5.5.0",
+    "@svgr/rollup": "^5.5.0",
+    "@types/react": "^17.0.19",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rollup": "^2.56.2",
+    "rollup-plugin-filesize": "^9.1.1",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
+  "dependencies": {}
 }
