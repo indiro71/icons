@@ -9,7 +9,12 @@ const BUILD_PATH = path.join(__dirname, '..', 'lib');
 
 const getPackageJsonSource = ({ version }) => `{
   "name": "@indiro/react-icons",
-  "version": "${version}"
+  "version": "${version}",
+  "main": "lib/index.esm.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ]
 }`;
 
 const publishLib = async () => {
