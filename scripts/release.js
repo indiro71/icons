@@ -11,7 +11,7 @@ const getPackageJsonSource = ({ version }) => `{
   "name": "@indiro/react-icons",
   "version": "${version}",
   "peerDependencies": {
-    "react": ">=17.1.0"
+    "react": ">=16.1.0"
   }
 }`;
 
