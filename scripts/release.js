@@ -11,8 +11,7 @@ const getPackageJsonSource = ({ version }) => `{
   "name": "@indiro/react-icons",
   "version": "${version}",
   "peerDependencies": {
-    "react": ">=16.2.0",
-    "react-native-web": ">=0.3.4"
+    "react": ">=17.1.0"
   }
 }`;
 
@@ -30,7 +29,7 @@ const publishLib = () => {
   exec('git add -A');
   exec('git commit -m "Add images"');
   exec('git push');
-  //exec(`cd ${BUILD_PATH} && npm publish --access=public`);
+  exec(`cd ${BUILD_PATH} && npm publish --access=public`);
 }
 
 publishLib();
