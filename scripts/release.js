@@ -30,7 +30,7 @@ const publishLib = () => {
   exec('git add -A');
   exec('git commit -m "Add images"');
   exec('git push');
-  exec(`cd ${BUILD_PATH} && npm publish --access=public`);
+  //exec(`cd ${BUILD_PATH} && npm publish --access=public`);
 }
 
 publishLib();
