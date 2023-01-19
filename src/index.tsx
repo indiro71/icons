@@ -1,1 +1,5 @@
-export * from './icons';
+import { AddInspection, Outline} from './icons';
+
+export {
+    AddInspection, Outline
+}
