@@ -1,6 +1,6 @@
 {
   "name": "@indiro/icons",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "scripts": {
     "clean": "rm -rf src/icons && rm -rf lib",
     "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
