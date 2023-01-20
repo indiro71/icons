@@ -7,7 +7,7 @@
     "build": "npm run clean && npm run svgr && rollup -c",
     "release": "npm run build && NODE_ENV=production node scripts/release.js"
   },
-  "main": "lib/index.esm.js",
+  "main": "lib/index.esm.js/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
