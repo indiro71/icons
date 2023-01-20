@@ -1,9 +1,7 @@
 import React, { useCallback, useState } from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import styled from 'styled-components';
 import * as components from './icons/';
-
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { ArrowPrev } from './index';
 
 export default {
@@ -16,7 +14,7 @@ export default {
 } as ComponentMeta<typeof ArrowPrev>;
 
 const Container = styled.div`
-  max-width: 80%;
+  padding: 30px;
   margin: auto;
 `
 const Search = styled.div`
@@ -40,7 +38,6 @@ const IconContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  justify-content: center;
 `
 
 const IconItem = styled.div`
@@ -48,11 +45,17 @@ const IconItem = styled.div`
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
-  padding: 10px;
   margin: 15px;
   cursor: pointer;
   border-radius: 10px;
   transition: all 0.2s ease-in-out;
+  width: 70px;
+  height: 70px;
+  
+  svg {
+    max-width: 50px;
+    max-height: 50px;
+  }
   
   &:hover {
     background: rgba(47, 47, 47, 0.1);
@@ -65,7 +68,7 @@ const IconTitle = styled.div`
   white-space: nowrap;
   text-align: center;
   width: 100%;
-  font-size: 11px;
+  font-size: 12px;
   margin-top: 10px;
 `
 
