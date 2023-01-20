@@ -1,13 +1,14 @@
 {
-  "name": "@indiro/react-icons-library",
-  "version": "1.0.4",
+  "private": true,
+  "name": "@indiro/icons",
+  "version": "1.0.50",
   "scripts": {
     "clean": "rm -rf src/icons && rm -rf lib",
     "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
     "build": "npm run clean && npm run svgr && rollup -c",
-    "release": "npm run build && NODE_ENV=production node scripts/release.js"
+    "release": "npm run build && git stash && npm version patch && git stash pop && NODE_ENV=production node scripts/release.js"
   },
-  "main": "lib/index.esm.js/index.js/index.js",
+  "main": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib"
@@ -27,5 +28,9 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.3.5"
-  }
+  },
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
+  "dependencies": {}
 }
