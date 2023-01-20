@@ -3,7 +3,7 @@ interface SVGRProps {
   title?: string;
   titleId?: string;
 }
-function AddInspection({
+function AddInspectionIcon({
   title,
   titleId,
   ...props
@@ -27,4 +27,4 @@ function AddInspection({
     </svg>
   );
 }
-export default AddInspection;
+export default AddInspectionIcon;

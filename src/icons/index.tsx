@@ -1,5 +1,5 @@
 export { default as AddWithCdu } from './AddWithCdu'
-export { default as AddInspection } from './AddInspection'
+export { default as AddInspectionIcon } from './AddInspectionIcon'
 export { default as AddPersonIcon } from './AddPersonIcon'
 export { default as ArrowNext } from './ArrowNext'
 export { default as ArrowPrev } from './ArrowPrev'
