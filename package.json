@@ -1,6 +1,6 @@
 {
   "name": "@indiro/react-icons-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "clean": "rm -rf src/icons && rm -rf lib",
     "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
