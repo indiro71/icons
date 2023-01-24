@@ -15,12 +15,14 @@ import { ArrowRight } from '@indiro/react-icons-library';
 ```
 ## Add new Icons
 
- - copy SVG icon in `assets`
- - run command
+ 1. Copy SVG icons in `assets`
+ 2. Execute command `npm run release`
 
-```bash
-npm run release
-```
+## Icon overview
+
+All icons can be viewed in the `Storybook`. Using the command `npm run storybook`
+
+New icons are added automatically
 
 ## License
 
