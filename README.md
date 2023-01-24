@@ -10,7 +10,8 @@ npm i @indiro/react-icons-library
 
 ```jsx
 import { ArrowRight } from '@indiro/react-icons-library';
-<ArrowRight style={{width: 50}} title="Right arrow"  />
+
+<ArrowRight style={{width: 50}} title="Right arrow" />
 ```
 ## Add new Icons
 
