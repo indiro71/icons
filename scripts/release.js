@@ -15,7 +15,7 @@ const getPackageJsonSource = () => `{
   "homepage": "https://icons.indiro.ru/?path=/story/icons--icons",
   "repository": {
     "type": "git",
-    "url": "https://github.com/indiro71/icons"
+    "url": "https://github.com/indiro71/react-icons-library"
   },
   "author": "INDIRO",
   "license": "MIT",
