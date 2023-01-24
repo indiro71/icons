@@ -1,6 +1,0 @@
-<svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M1.00001 13L1 21H9L8.99999 13L1.00001 13Z" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
-  <path d="M1.00001 1L1 9L9 9L8.99999 1L1.00001 1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
-  <path d="M13 13L13 21H21L21 13L13 13Z" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
-  <path d="M13 1L13 9L21 9L21 1L13 1Z" stroke="currentColor" stroke-width="2" stroke-linejoin="bevel"/>
-</svg>
