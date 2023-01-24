@@ -1,6 +1,6 @@
 {
   "name": "@indiro/react-icons-library",
-  "version": "1.0.58",
+  "version": "1.0.63",
   "homepage": "https://github.com/indiro71/icons",
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "main": "lib/index.esm.js",
+  "main": "index.esm.js/index.js",
   "types": "index.d.ts",
   "files": [
     "lib"
