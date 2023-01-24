@@ -1,20 +1,34 @@
 const fs = require('fs-extra');
 const path = require('path');
 const execSync = require('child_process').execSync;
+const pkg = require('../package.json');
 
 const exec = command => execSync(command, { stdio: 'inherit' });
 
 const BUILD_PATH = path.join(__dirname, '..', 'lib');
 
+const getPackageJsonSource = () => `{
+  "name": "${pkg.name}",
+  "version": "${pkg.version}",
+  "main": "${pkg.main}",
+  "types": "${pkg.types}",
+  "homepage": "${pkg.homepage}",
+  "repository": ${pkg.repository},
+  "author": "${pkg.author}",
+  "license": "${pkg.license}",
+  "keywords": ${pkg.keywords}
+}`;
+
 const publishLib = async () => {
+  const pj = {
+    filepath: 'package.json',
+    source: getPackageJsonSource()
+  }
+
+  await fs.outputFile(path.join(BUILD_PATH, pj.filepath), pj.source);
+  await fs.copyFile(path.join(__dirname, '..', 'README.md'), path.join(BUILD_PATH, 'README.md'));
   console.log('publish')
 
-  exec('npm run build');
-  exec('git stash');
-  exec('npm version patch');
-  exec('git stash pop');
-  await fs.copyFile(path.join(__dirname, '..', 'package.json'), path.join(BUILD_PATH, 'package.json'));
-  await fs.copyFile(path.join(__dirname, '..', 'README.md'), path.join(BUILD_PATH, 'README.md'));
   exec('git status');
   exec('git add -A');
   exec('git commit -m "Add images"');
@@ -22,4 +36,4 @@ const publishLib = async () => {
   exec(`cd ${BUILD_PATH} && npm publish --access=public`);
 }
 
-publishLib();
+await publishLib();
