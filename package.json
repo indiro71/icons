@@ -25,9 +25,6 @@
   },
   "main": "index.esm.js/index.js",
   "types": "index.d.ts",
-  "files": [
-    "lib"
-  ],
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@rollup/plugin-babel": "^5.3.0",
