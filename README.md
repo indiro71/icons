@@ -24,6 +24,9 @@ All icons can be viewed in the `Storybook`. Using the command `npm run storybook
 
 New icons are added automatically
 
+![image](https://user-images.githubusercontent.com/30959982/214337055-2230c25b-8988-4f0c-97bb-3c82eeecacac.png)
+
+
 ## License
 
 MIT
