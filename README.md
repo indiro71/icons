@@ -1,5 +1,9 @@
 # Icons library
 
+Icons library from SVG as React-components
+
+[Online Example](https://icons.indiro.ru/?path=/story/icons--icons)
+
 ## Installation
 
 ```bash

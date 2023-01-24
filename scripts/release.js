@@ -12,7 +12,7 @@ const getPackageJsonSource = () => `{
   "version": "${pkg.version}",
   "main": "${pkg.main}",
   "types": "${pkg.types}",
-  "homepage": "https://github.com/indiro71/icons",
+  "homepage": "https://icons.indiro.ru/?path=/story/icons--icons",
   "repository": {
     "type": "git",
     "url": "https://github.com/indiro71/icons"
