@@ -6,7 +6,6 @@ const exec = command => execSync(command, { stdio: 'inherit' });
 
 const BUILD_PATH = path.join(__dirname, '..', 'lib');
 
-
 const publishLib = async () => {
   console.log('publish')
 
@@ -15,6 +14,7 @@ const publishLib = async () => {
   exec('npm version patch');
   exec('git stash pop');
   await fs.copyFile(path.join(__dirname, '..', 'package.json'), path.join(BUILD_PATH, 'package.json'));
+  await fs.copyFile(path.join(__dirname, '..', 'README.md'), path.join(BUILD_PATH, 'README.md'));
   exec('git status');
   exec('git add -A');
   exec('git commit -m "Add images"');
