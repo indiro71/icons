@@ -36,4 +36,4 @@ const publishLib = async () => {
   exec(`cd ${BUILD_PATH} && npm publish --access=public`);
 }
 
-await publishLib();
+publishLib();
