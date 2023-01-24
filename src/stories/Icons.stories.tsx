@@ -1,8 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import styled from 'styled-components';
-import * as components from './icons/';
-import { ArrowPrev } from './index';
+import * as components from '../icons/';
+import { ArrowPrev } from '../icons';
 
 export default {
     title: 'Icons',

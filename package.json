@@ -1,17 +1,30 @@
 {
-  "private": true,
-  "name": "@indiro/icons",
-  "version": "1.0.54",
+  "name": "@indiro/react-icons-library",
+  "version": "1.0.57",
+  "homepage": "https://github.com/indiro71/icons",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indiro71/icons"
+  },
+  "author": "INDIRO",
+  "license": "MIT",
+  "keywords": [
+    "svg",
+    "icons",
+    "library",
+    "svgr",
+    "SvgComponent"
+  ],
   "scripts": {
     "clean": "rm -rf src/icons && rm -rf lib",
     "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
     "build": "npm run clean && npm run svgr && rollup -c",
-    "release": "npm run build && git stash && npm version patch && git stash pop && NODE_ENV=production node scripts/release.js",
+    "release": "NODE_ENV=production node scripts/release.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "main": "lib/index.esm.js",
-  "types": "lib/index.d.ts",
+  "types": "index.d.ts",
   "files": [
     "lib"
   ],
@@ -34,12 +47,7 @@
     "rollup-plugin-filesize": "^9.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
+    "styled-components": "^5.3.6",
     "typescript": "^4.3.5"
-  },
-  "peerDependencies": {
-    "react": "^17.0.0"
-  },
-  "dependencies": {
-    "styled-components": "^5.3.6"
   }
 }
