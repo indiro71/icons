@@ -12,11 +12,20 @@ const getPackageJsonSource = () => `{
   "version": "${pkg.version}",
   "main": "${pkg.main}",
   "types": "${pkg.types}",
-  "homepage": "${pkg.homepage}",
-  "repository": ${pkg.repository},
-  "author": "${pkg.author}",
-  "license": "${pkg.license}",
-  "keywords": ${pkg.keywords}
+  "homepage": "https://github.com/indiro71/icons",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indiro71/icons"
+  },
+  "author": "INDIRO",
+  "license": "MIT",
+  "keywords": [
+    "svg",
+    "icons",
+    "library",
+    "svgr",
+    "SvgComponent"
+  ]
 }`;
 
 const publishLib = async () => {
