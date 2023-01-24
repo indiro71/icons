@@ -19,7 +19,7 @@
     "clean": "rm -rf src/icons && rm -rf lib",
     "svgr": "svgr --icon --title-prop --no-dimensions --typescript -d src/icons assets",
     "build": "npm run clean && npm run svgr && rollup -c",
-    "release": "NODE_ENV=production node scripts/release.js",
+    "release": "node scripts/release.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -46,5 +46,8 @@
     "rollup-plugin-typescript2": "^0.30.0",
     "styled-components": "^5.3.6",
     "typescript": "^4.3.5"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0"
   }
 }
